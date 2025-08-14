@@ -1,0 +1,35 @@
+# VIETNAM MARITIME SOURCES (Preset)
+# Chỉ dùng các nguồn bạn có quyền, và tôn trọng robots.txt/TOS.
+# Pipeline hỗ trợ: rss, sitemaps, list_pages (CSS selector), pages
+
+rss:
+  # Báo vĩ mô/giao thông có thể lọc hàng hải (tham khảo, có thể thay)
+  - https://vnexpress.net/rss/kinh-doanh.rss
+  - https://vnexpress.net/rss/thoi-su.rss
+  - https://vietnambiz.vn/kinh-doanh/rss.htm
+
+sitemaps:
+  # Cảng & doanh nghiệp hàng hải
+  - https://www.danangport.com/sitemap.xml
+  - https://www.haiphongport.com.vn/sitemap.xml
+  - https://saigonnewport.com.vn/sitemap.xml
+  - https://vimc.co/sitemap.xml
+  - https://ptsc.com.vn/sitemap.xml
+
+list_pages:
+  # Cục Hàng hải Việt Nam (tin tức) – selector có thể thay đổi theo giao diện
+  - url: https://www.vinamarine.gov.vn/tin-tuc
+    link_selector: "article a, .news-list a"
+    limit: 15
+  # Đăng kiểm Việt Nam / VR (tin tức) – cập nhật selector nếu cần
+  - url: https://www.vr.org.vn/portal
+    link_selector: "a[href*='tin-tuc'], .post-title a"
+    limit: 15
+
+pages:
+  # Trang thông báo/lịch – để hệ thống có ít nhất vài nguồn tĩnh
+  - https://www.danangport.com/vi/tin-tuc/
+  - https://www.haiphongport.com.vn/tin-tuc/
+  - https://saigonnewport.com.vn/tin-tuc.html
+  - https://vimc.co/tin-tuc/
+  - https://ptsc.com.vn/category/tin-tuc/

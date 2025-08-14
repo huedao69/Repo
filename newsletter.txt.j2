@@ -1,0 +1,10 @@
+{{ title }}
+{{ '-' * title|length }}
+
+Tóm tắt: {{ summary }}
+
+{% for item in items %}
+• {{ item.title }} — {{ item.url }}
+{% endfor %}
+
+Nguồn: tổng hợp công khai (trích dẫn ở từng mục)
